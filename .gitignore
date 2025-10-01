@@ -401,3 +401,4 @@ FodyWeavers.xsd
 
 # Custom
 .env
+.aspire/

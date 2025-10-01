@@ -9,7 +9,7 @@ namespace DatabaseDeploy
             string connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__db");
             EnsureDatabase.For.SqlDatabase(connectionString);
             DeployChanges.To.SqlDatabase(connectionString)                
-                .WithScriptsFromFileSystem("../../../scripts")
+                .WithScriptsFromFileSystem("./scripts")
                 .LogToConsole()
                 .Build()
                 .PerformUpgrade();

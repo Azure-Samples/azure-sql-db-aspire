@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Microsoft.Data.SqlClient" Version="9.4.0" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.0" />
+    <PackageReference Include="Aspire.Microsoft.Data.SqlClient" Version="9.5.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
   </ItemGroup>
 
   <ItemGroup>

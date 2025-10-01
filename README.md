@@ -2,7 +2,7 @@
 
 A set of samples that show how to integrate SQL Server and Azure SQL with [.NET Aspire](https://learn.microsoft.com/dotnet/aspire/get-started/aspire-overview). 
 
-**Updated to use Aspire 9.4**
+**Updated to use Aspire 9.5**
 
 All the samples can now be easily executed via the [Aspire CLI](https://learn.microsoft.com/dotnet/aspire/cli/install?tabs=windows), using the `aspire run` command from each sample folder.
 
