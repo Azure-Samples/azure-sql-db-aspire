@@ -28,19 +28,19 @@ The basic .Net Aspire application with a simple WebAPI project (WebApplication1)
 
 The simplest integration of SQL Server in .NET Aspire. It takes the "Base" example and updates the WebAPI so that now it is calling an existing SQL Server, using a provided connectiong string. If you need a free, on-premise SQL Server, you can use the [SQL Server Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) that is free for development and testing. The easiest way to run it is to use the image that you can get using [`sqlcmd`](https://azuresql.dev/content/sql-server-dev-go-sqlcmd):
 
-```bash
+```shell
 sqlcmd create mssql --accept-eula
 ```
 
 Get the ADO.NET connection string from the SQL Server container via:
 
-```bash
+```shell
 sqlcmd config cs
 ```
 
 and then make sure to save it in the user secrets of the `AspireApp1.AppHost` project, so that it can be used by the application. 
 
-```bash
+```shell
 dotnet user-secrets set 'ConnectionStrings:db' '<your-connection-string>'
 ```
 
@@ -50,7 +50,7 @@ dotnet user-secrets set 'ConnectionStrings:db' '<your-connection-string>'
 
 Change the BYOSS sample so the SQL Server is deployed and managed by Aspire orchestration, providing a basic integration with the Aspire environment. SQL Server is deployed in a OCI container by Aspire. No changes to WebAPI project. If you want to set the password for the created SQL Server, you can do it by setting the `Parameters:sqlsrv-password` user secret:
 
-```bash
+```shell
 dotnet user-secrets set 'Parameters:sqlsrv-password' '<your-password>' 
 ```
 
@@ -105,13 +105,13 @@ Full end-to-end example of a Jamstack application, with a Vue front-end, a Data 
 
 You can run the application, either via Visual Studio or Visual Studio Code or the command line:
 
-```
+```shell
 aspire run
 ```
 
 if for some reason you get an error about `.dacpac` file not being available, build the .dacpac manually by runnig the following command to build the database project:
 
-```
+```shell
 cd .\TodoApp.Database\
 dotnet build
 ```
