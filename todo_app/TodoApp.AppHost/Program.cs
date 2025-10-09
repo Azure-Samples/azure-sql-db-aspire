@@ -1,6 +1,7 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddParameter("sqlsrv-password");
+// This is implictly there already, no need to manually add it
+// builder.AddParameter("sqlsrv-password");
 
 // SQL Server
 var sqlSrv = builder.AddSqlServer("sqlsrv", port: 1435)
