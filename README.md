@@ -87,7 +87,7 @@ The database is deployed using a EF Core database migrations, that are deployed 
 Please note that to keep the sample as simple as possible the EF Core entities and migrations have been defined directly in the WebApplication1 solution, which is not a best practice for a real-world application. A dedicated project should be created for the EF Core entities and migrations.
 
 > [!NOTE]
-> This example uses `Aspire.Hosting.Azure.Sql` so that it can be **deployed in Azure** via `azd up` and an Azure SQL DB will be created and the database schema will be deployed.
+> This example uses `Aspire.Hosting.Azure.Sql` so that it can be **deployed in Azure** via `aspire deploy` and an Azure SQL DB will be created and the database schema will be deployed.
 
 ## Aspire-Hosted SQL Server + DbUp + DAB
 
