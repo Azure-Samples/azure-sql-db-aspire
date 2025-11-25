@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Sdk Name="Aspire.AppHost.Sdk" Version="9.5.0" />
+  <Sdk Name="Aspire.AppHost.Sdk" Version="13.0.0" />
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UserSecretsId>2c343a00-3aab-423f-b3a2-2feabf216baa</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.5.0" />
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="13.0.0" />
   </ItemGroup>
 
   <ItemGroup>
