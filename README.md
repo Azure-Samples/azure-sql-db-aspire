@@ -1,6 +1,6 @@
 # SQL Server Aspire Samples
 
-A set of samples that show how to integrate SQL Server and Azure SQL with [.NET Aspire](https://learn.microsoft.com/dotnet/aspire/get-started/aspire-overview). 
+A set of samples that show how to integrate SQL Server and Azure SQL with [Aspire](https://learn.microsoft.com/dotnet/aspire/get-started/aspire-overview). 
 
 **Updated to use Aspire 9.5**
 
@@ -26,7 +26,7 @@ The basic .Net Aspire application with a simple WebAPI project (WebApplication1)
 
 - Folder: [`./byoss`](./byoss)
 
-The simplest integration of SQL Server in .NET Aspire. It takes the "Base" example and updates the WebAPI so that now it is calling an existing SQL Server, using a provided connectiong string. If you need a free, on-premise SQL Server, you can use the [SQL Server Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) that is free for development and testing. The easiest way to run it is to use the image that you can get using [`sqlcmd`](https://azuresql.dev/content/sql-server-dev-go-sqlcmd):
+The simplest integration of SQL Server in Aspire. It takes the "Base" example and updates the WebAPI so that now it is calling an existing SQL Server, using a provided connectiong string. If you need a free, on-premise SQL Server, you can use the [SQL Server Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) that is free for development and testing. The easiest way to run it is to use the image that you can get using [`sqlcmd`](https://azuresql.dev/content/sql-server-dev-go-sqlcmd):
 
 ```shell
 sqlcmd create mssql --accept-eula
@@ -54,7 +54,7 @@ Change the BYOSS sample so the SQL Server is deployed and managed by Aspire orch
 dotnet user-secrets set 'Parameters:sqlsrv-password' '<your-password>' 
 ```
 
-otherwise a random generated password will be used. Read all the details on Azure SQL and SQL Server integration with Aspire here: [.NET Aspire SQL Server integration](https://learn.microsoft.com/en-us/dotnet/aspire/database/sql-server-integration)
+otherwise a random generated password will be used. Read all the details on Azure SQL and SQL Server integration with Aspire here: [Aspire SQL Server integration](https://learn.microsoft.com/en-us/dotnet/aspire/database/sql-server-integration)
 
 The integration with Aspire is quite basic in this sample as it is done using only on the server side, introducting usage the `Aspire.Hosting.SqlServer` library in AppHost project. 
 
@@ -82,7 +82,7 @@ Similar to the previous sample, but the database is deployed using a declarative
 
 In this sample, the client application (Webapplication1) is now using Entity Framework Core to interact with the SQL Server. The EF Core database context is provided via Dependency Injection, thanks to the usage of the library: `Aspire.Microsoft.EntityFrameworkCore.SqlServer`.
 
-The database is deployed using a EF Core database migrations, that are deployed with the support of a Worker Service, as explained in the Aspire documentation ["Apply Entity Framework Core migrations in .NET Aspire"](https://learn.microsoft.com/en-us/dotnet/aspire/database/ef-core-migrations).
+The database is deployed using a EF Core database migrations, that are deployed with the support of a Worker Service, as explained in the Aspire documentation ["Apply Entity Framework Core migrations in Aspire"](https://learn.microsoft.com/en-us/dotnet/aspire/database/ef-core-migrations).
 
 Please note that to keep the sample as simple as possible the EF Core entities and migrations have been defined directly in the WebApplication1 solution, which is not a best practice for a real-world application. A dedicated project should be created for the EF Core entities and migrations.
 
